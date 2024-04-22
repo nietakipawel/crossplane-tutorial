@@ -165,7 +165,7 @@ else
 
     AZURE_TENANT_ID=$(gum input --placeholder "Azure Tenant ID" --value "$AZURE_TENANT_ID")
 
-    az login --tenant $AZURE_TENANT_ID
+    az login --tenant $AZURE_TENANT_ID --use-device-code
 
     export SUBSCRIPTION_ID=$(az account show --query id -o tsv)
 
